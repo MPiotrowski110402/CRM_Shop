@@ -17,9 +17,9 @@
         <li x-data="{ open: false }">
             <button @click="open = !open" class="w-full text-left p-3 hover:bg-gray-600">Zamówienia</button>
             <ul x-show="open" class="pl-4">
-                <li><a href="/products" class="block p-2 hover:bg-gray-700">Lista zamówień</a></li>
-                <li><a href="#" class="block p-2 hover:bg-gray-700">Szczegóły zamówień</a></li>
-                <li><a href="#" class="block p-2 hover:bg-gray-700">Statusy zamówień</a></li>
+                <li><a href="/products" class="block p-2 hover:bg-gray-700">Nowe zamówień</a></li>
+                <li><a href="/productInProgress" class="block p-2 hover:bg-gray-700">zamówienia w trakcie</a></li>
+                <li><a href="/productHistory" class="block p-2 hover:bg-gray-700">Historia zamówień</a></li>
                 <li><a href="#" class="block p-2 hover:bg-gray-700">Zwroty i reklamacje</a></li>
                 <li><a href="#" class="block p-2 hover:bg-gray-700">Faktury</a></li>
             </ul>

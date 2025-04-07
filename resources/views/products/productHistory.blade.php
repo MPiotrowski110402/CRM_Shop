@@ -4,6 +4,12 @@
 
 @section('content')
     <h2 class="mt-4">Historia zamówień</h2>
+    @if(session('success'))
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{ session('success') }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Zamknij"></button>
+        </div>
+    @endif
 
     <!-- Pole wyszukiwania -->
     <input type="text" id="searchInput" class="form-control mb-3" placeholder="Szukaj zamówienia...">
@@ -26,8 +32,7 @@
                         <td class="order-number">{{ $order->order_number }}</td>
                         <td class="order-date">{{ $order->created_at->format('d.m.Y H:i') }}</td>
                         <td class="order-price">{{ $order->total_price }} {{ $order->currency }}</td>
-                        <td class="order-status">{{ $order->status }}</td>
-                        <td><a href="/productProcess/{{$order->id}}" class="btn btn-info btn-sm">Rozpocznij</a></td>
+                        <td class="order-status">{{ $order->status }}</td> 
                     </tr>
                 @endforeach
             </tbody>
